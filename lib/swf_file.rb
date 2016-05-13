@@ -1,16 +1,13 @@
-swf_file_path = File.join(File.dirname(__FILE__), 'swf_file')
-$:.unshift swf_file_path unless $:.include? swf_file_path
-
 require 'zlib'
 
 module SwfFile
 
-  autoload :FlashFile,        'flash_file'
-  autoload :Parser,           'parser'
-  autoload :Compression,      'compression'
-  autoload :Conversions,      'conversions'
-  autoload :Assertions,       'assertions'
-  autoload :PackedBitObject,  'packed_bit_object'
-  autoload :SwfHeader,        'swf_header'
+  autoload :FlashFile,        'swf_file/flash_file'
+  autoload :Parser,           'swf_file/parser'
+  autoload :Compression,      'swf_file/compression'
+  autoload :Conversions,      'swf_file/conversions'
+  autoload :Assertions,       'swf_file/assertions'
+  autoload :PackedBitObject,  'swf_file/packed_bit_object'
+  autoload :SwfHeader,        'swf_file/swf_header'
 
 end # SwfFile
